@@ -1,7 +1,36 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Text(
+            'Dice',
+          ),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Text(
+                'Click on dice to Roll',
+              style: TextStyle(
+                fontSize: 30.0,
+                color: Colors.white,
+                fontFamily: 'Source Sans Pro'
+              ),
+            ),
+            DicePage(),
+            Container(
+              width: double.infinity,
+            ),
+          ],
+        )),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +41,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.green,
         body: SafeArea(
-          child:Column(
+          child: Column(
             mainAxisSize: MainAxisSize.max,
             // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,12 +59,11 @@ class MyApp extends StatelessWidget {
               Text(
                 'Dev Patel',
                 style: TextStyle(
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  fontFamily: 'Pacifico',
-                  color: Colors.white
-                ),
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Pacifico',
+                    color: Colors.white),
               ),
               Text(
                 'DEVELOPER',
@@ -43,9 +71,8 @@ class MyApp extends StatelessWidget {
                   fontSize: 20.0,
                   color: Colors.teal[100],
                   letterSpacing: 2.5,
-                  fontFamily:'Source Sans Pro',
+                  fontFamily: 'Source Sans Pro',
                   fontWeight: FontWeight.bold,
-
                 ),
               ),
               SizedBox(
@@ -57,54 +84,45 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                 // color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 40.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
                     color: Colors.white,
-                  ),
-                  borderRadius:BorderRadius.circular(20)
-                ),
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.phone,
-                      color:Colors.teal
-                    ),
+                    Icon(Icons.phone, color: Colors.teal),
                     SizedBox(
                       width: 10.0,
                     ),
                     Text(
                       '+91 99-789-008-24',
                       style: TextStyle(
-                        color: Colors.teal,
-                        fontSize: 25.0,
-                        fontFamily: 'Source Sans Pro'
-                      ),
+                          color: Colors.teal,
+                          fontSize: 25.0,
+                          fontFamily: 'Source Sans Pro'),
                     )
                   ],
                 ),
               ),
               Container(
                 // color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 40.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius:BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                        Icons.mail,
-                        color:Colors.teal
-                    ),
+                    Icon(Icons.mail, color: Colors.teal),
                     SizedBox(
                       width: 10.0,
                     ),
@@ -113,30 +131,25 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.teal,
                           fontSize: 25.0,
-                          fontFamily: 'Source Sans Pro'
-                      ),
+                          fontFamily: 'Source Sans Pro'),
                     )
                   ],
                 ),
               ),
               Container(
                 // color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 40.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius:BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                        Icons.phone,
-                        color:Colors.teal
-                    ),
+                    Icon(Icons.phone, color: Colors.teal),
                     SizedBox(
                       width: 10.0,
                     ),
@@ -145,30 +158,25 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.teal,
                           fontSize: 25.0,
-                          fontFamily: 'Source Sans Pro'
-                      ),
+                          fontFamily: 'Source Sans Pro'),
                     )
                   ],
                 ),
               ),
               Container(
                 // color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 40.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius:BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                        Icons.mail,
-                        color:Colors.teal
-                    ),
+                    Icon(Icons.mail, color: Colors.teal),
                     SizedBox(
                       width: 10.0,
                     ),
@@ -177,30 +185,25 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.teal,
                           fontSize: 25.0,
-                          fontFamily: 'Source Sans Pro'
-                      ),
+                          fontFamily: 'Source Sans Pro'),
                     )
                   ],
                 ),
               ),
               Container(
                 // color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 40.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
                       color: Colors.white,
                     ),
-                    borderRadius:BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                        Icons.mail,
-                        color:Colors.teal
-                    ),
+                    Icon(Icons.mail, color: Colors.teal),
                     SizedBox(
                       width: 10.0,
                     ),
@@ -209,8 +212,7 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.teal,
                           fontSize: 25.0,
-                          fontFamily: 'Source Sans Pro'
-                      ),
+                          fontFamily: 'Source Sans Pro'),
                     )
                   ],
                 ),
@@ -222,6 +224,52 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class DicePage extends StatefulWidget {
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNum = 4;
+  int rightDiceNum = 1;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      // padding:EdgeInsets.all(16.0),
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Expanded(
+          child: TextButton(
+            child: Image.asset('images/dice$leftDiceNum.png'),
+            onPressed: () {
+              setState(() {
+                leftDiceNum = Random().nextInt(6) + 1;
+                rightDiceNum = Random().nextInt(6) + 1;
+              });
+            },
+          ),
+        ),
+        SizedBox(
+          width: 15.0,
+        ),
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              setState(() {
+                rightDiceNum = Random().nextInt(6) + 1;
+                leftDiceNum = Random().nextInt(6) + 1;
+              });
+            },
+            child: Image.asset('images/dice$rightDiceNum.png'),
+          ),
+        ),
+      ],
     );
   }
 }
